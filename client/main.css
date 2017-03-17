@@ -1,6 +1,7 @@
 /* CSS declarations go here */
 h1{
 	font-size: 80px;
+	color: blue;
 }
 body {
 background-color: red;
@@ -9,3 +10,4 @@ background-color: red;
 	display: flex;;
 justify-content: space-around;	
 }
+
