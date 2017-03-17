@@ -1,0 +1,17 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Around the corner</h1>
+    </header>
+ 
+    <ul>
+      {{#each allDivs}}
+        {{> mydiv}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="mydiv">
+  <div class="mainHeadings">{{text}}</div>
+</template>

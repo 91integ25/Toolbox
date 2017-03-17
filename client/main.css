@@ -1,1 +1,11 @@
 /* CSS declarations go here */
+h1{
+	font-size: 80px;
+}
+body {
+background-color: red;
+}
+.mainHeadings{
+	display: flex;;
+justify-content: space-around;	
+}
