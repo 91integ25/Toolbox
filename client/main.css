@@ -1,11 +1,61 @@
 /* CSS declarations go here */
+body{
+    background-color: red;
+}
 h1{
+	display: flex;
+	justify-content: center;
 	font-size: 80px;
 	color: blue;
+
 }
-body {
-background-color: red;
+.mainTitles {
+	display: flex;
+	justify-content: space-around;
+    align-content: center;
+	margin: 20px;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+nav{
+	padding: 30px 0px 30px 0px;
+}
+.mainDivs p{
+    text-align: center;
+
+
+}
+
+
+.mainImages{
+    height: 10em;
+    width:15em;
+    margin:2em;
+}
+
 .mainHeadings{
 	display: flex;;
 justify-content: space-around;	
