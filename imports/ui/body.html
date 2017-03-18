@@ -1,5 +1,6 @@
 <body>
   <div class="container">
+      {{> userLogin}}
     <header>
       <h1>Around the corner</h1>
     </header>
@@ -14,4 +15,8 @@
  
 <template name="mydiv">
   <div class="mainHeadings">{{text}}</div>
+</template>
+
+<template name="userLogin">
+  {{> loginButtons}}
 </template>
