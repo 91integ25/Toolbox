@@ -2,10 +2,3 @@ import { Template } from 'meteor/templating';
  
 import './body.html';
  
-Template.body.helpers({
-  allDivs: [
-    { text: 'This is task 1' },
-    { text: 'This is task 2' },
-    { text: 'This is task 3' },
-  ],
-});

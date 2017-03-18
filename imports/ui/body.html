@@ -1,19 +1,38 @@
 <body>
+  {{> Navbar}}
   <div class="container">
     <header>
-      <h1>Around the corner</h1>
+      <h1>Toolbox</h1>
     </header>
- 
-    <ul>
-      {{#each allDivs}}
-        {{> mydiv}}
-      {{/each}}
-    </ul>
+    
+    
+    {{> mainTitles}}
+    
   </div>
 </body>
- 
-<template name="mydiv">
-  
-  <div class="mainHeadings">{{text}}</div>
-
+<template name="mainTitles">
+<div class="mainTitles">
+  <div class="mainDivs" >
+    <p>Tools</p>
+    <img class="mainImages" src="images/tools.png" alt="tools image">
+  </div>
+  <div class="mainDivs" >
+    <p>Buy</p>
+    <img class="mainImages" src="images/stripe.png" alt="stripe logo">
+  </div>
+  <div class="mainDivs" >
+    <p>Save</p><img
+    class="mainImages" src="images/dollar.jpg" alt="money!!">
+  </div>
+</div>
+</template>
+<template name= "Navbar">
+<nav>
+  <ul>
+    <li><a href="">pricing</a></li>
+    <li><a href="">comparison</a></li>
+    <li><a href="">nearby</a></li>
+    <li><a href="">users</a></li>
+  </ul>
+</nav>
 </template>
