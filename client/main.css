@@ -6,6 +6,7 @@ h1{
 	display: flex;
 	justify-content: center;
 	font-size: 80px;
+	color: blue;
 }
 .mainTitles {
 	display: flex;
@@ -13,9 +14,7 @@ h1{
     align-content: center;
 	margin: 20px;
 }
-.mainTitles p{
-    align-text: center
-}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -36,7 +35,7 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
     background-color: #111;
 }
@@ -48,8 +47,9 @@ nav{
 
 }
 
+
 .mainImages{
     height: 10em;
     width:15em;
-    margin:20px;
+    margin:2em;
 }
