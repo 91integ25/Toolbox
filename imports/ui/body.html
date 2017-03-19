@@ -1,23 +1,41 @@
 
 <body>
-  {{> Navbar}}
+    {{> Navbar}}
   <div class="container">
-
-
-{{> loginButtons}}
-
-
-    <header>
+   <header>
       <h1>Toolbox</h1>
     </header>
     
     
     {{> mainTitles}}
-
-  
+      {{> userLogin}}
+     {{> loggedInItems}}
   </div>
-  
-</body>
+
+ 
+ </body>
+
+<template name="loggedInItems">
+  <div class="description">
+  <h4>Description</h4>
+    <p>Welcome to our app the easy place to find any tool you need to 
+    borrow. Begin searching today and see what people in your neighborhood have to offer.</p>     
+  </div>
+<div class="services">
+<h4>Services</h4>
+  <p> Here at toolbox we strive to connect people that are looking to
+   borrow tools at an inexpensive price. You can post, search,  buy, and borrow tools that you may need </p>
+</div>
+<div class="about">
+<h4>About</h4>
+  <p>this app will allow you to connect with your neighbors safely and securely.
+  save that space in your garage.join us!!</p>
+</div>
+<div class="tools">
+  <h4>Tools</h4>
+  <p>The availability of rentals include chainsaws, lawnmowers, pressure washers and much more!!</p>
+</div>
+</template>
 
 <template name="mainTitles">
 <div class="mainTitles">
@@ -36,14 +54,25 @@
 </div>
 </template>
 <template name= "Navbar">
-<nav>
-  <ul>
-    <li><a href="">pricing</a></li>
-    <li><a href="">comparison</a></li>
-    <li><a href="">nearby</a></li>
-    <li><a href="">users</a></li>
-  </ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
 </nav>
+</template>
+<template name="userLogin">
+  {{> loginButtons}}
 </template>
 
 
