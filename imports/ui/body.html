@@ -1,18 +1,14 @@
 
 <body>
     {{> Navbar}}
+    {{> cityblocks}}
   <div class="container">
-   <header>
-      <h1>Toolbox</h1>
-    </header>
-    
-    
     {{> mainTitles}}
       {{> userLogin}}
      {{> loggedInItems}}
   </div>
 
- 
+ {{>footer}}
  </body>
 
 <template name="loggedInItems">
@@ -73,6 +69,19 @@
 </template>
 <template name="userLogin">
   {{> loginButtons}}
+</template>
+<template name="cityblocks">
+  <div class="cityblocks">
+   
+      <h1>Toolbox</h1>
+  </div>
+</template>
+<template name="footer"> 
+<footer>  
+<a href=""><h4>Contact Us</h4></a>
+<a href=""><h4>Make a post</h4></a>
+<a href=""><h4>Find something</h4></a>
+</footer>
 </template>
 
 
