@@ -2,6 +2,7 @@
 body{
     background-color: #FFF;
 }
+
 h1{
 	display: flex;
 	justify-content: center;
@@ -178,3 +179,4 @@ footer h4{
 
 
 }
+
