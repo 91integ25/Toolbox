@@ -1,17 +1,44 @@
 
 <body>
-    {{> Navbar}}
-    {{> cityblocks}}
-  <div class="container">
-    {{> mainTitles}}
-      {{> userLogin}}
-     {{> loggedInItems}}
+
+
+
+
+
+ 
+</body>
+
+<template name="home">
+<div class="container">
+<div class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="{{pathFor route='home'}}">TOOLBOX</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
   </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+      {{> login}} 
+    </ul>
+  </div>
+</div>
 
- {{>footer}}
- </body>
 
-<template name="loggedInItems">
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p><h1>TOOLBOX</h1></p>
+        <p><h2>Looking for a tool? Why not save and rent it from your neighbors!</h2></p>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="description">
   <h4>Description</h4>
     <p>Welcome to our app the easy place to find any tool you need to 
@@ -24,64 +51,41 @@
 </div>
 <div class="about">
 <h4>About</h4>
-  <p>this app will allow you to connect with your neighbors safely and securely.
-  save that space in your garage.join us!!</p>
+  <p>This app will allow you to connect with your neighbors safely and securely.
+  Save that space in your garage. Join us!!</p>
 </div>
 <div class="tools">
   <h4>Tools</h4>
   <p>The availability of rentals include chainsaws, lawnmowers, pressure washers and much more!!</p>
 </div>
-</template>
 
-<template name="mainTitles">
-<div class="mainTitles">
-  <div class="mainDivs" >
-    <p>Tools</p>
-    <img class="mainImages" src="images/tools.png" alt="tools image">
-  </div>
-  <div class="mainDivs" >
-    <p>Buy</p>
-    <img class="mainImages" src="images/stripe.png" alt="stripe logo">
-  </div>
-  <div class="mainDivs" >
-    <p>Save</p><img
-    class="mainImages" src="images/dollar.jpg" alt="money!!">
-  </div>
 </div>
-</template>
-<template name= "Navbar">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-</template>
-<template name="userLogin">
-  {{> loginButtons}}
-</template>
-<template name="cityblocks">
-  <div class="cityblocks">
-   
-      <h1>Toolbox</h1>
-  </div>
-</template>
-<template name="footer"> 
-<footer>  
-<a href=""><h4>Contact Us</h4></a>
-<a href=""><h4>Make a post</h4></a>
-<a href=""><h4>Find something</h4></a>
-</footer>
+
 </template>
 
+<template name="login">
+  <form class="login">
+        <!-- {{> loginButtons}} -->
+        <p>Email: <input type="email" name="email"></p>
+        <p>Password: <input type="password" name="password"></p>
+        <p><input type="submit" value="Register"></p>
+  </form>
+</template>
+
+<template name="register">
+  <h2>Register</h2>
+    <form class="register">
+        <p>Name: <input type="Name" name="Name"></p>
+        <p>Rent out your tool: <input type="text" name="Tool" value="None"></p>
+        <p>Price: <input type="number" name="price" value=""></p>
+        <p><input type="submit" value="register"></p>
+    </form>
+</template>
+
+<template name="toolSearch">
+    <form class="toolSearch">
+        <p>Tool Needed: <input type="Name" name="Tool"></p>
+        <p><input type="submit" value="Search"></p>
+    </form>
+</template>
 
