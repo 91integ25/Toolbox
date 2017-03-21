@@ -18,7 +18,6 @@ h1{
 .mainTitles {
 	display: flex;
 	justify-content: space-around;
-    align-content: center;
 	margin: 20px;
 }
 
@@ -76,6 +75,11 @@ margin-right: 150px;
     border-radius: 1%;
     padding:10px;
     margin:10px;
+    box-shadow:  -1px 1px #77aaff,
+         -2px 2px #77aaff,
+         -3px 3px #77aaff,
+         -4px 4px #77aaff,
+         -5px 5px #77aaff;
 
     
 }
@@ -87,6 +91,12 @@ margin-right: 150px;
     border-radius: 1%;
     padding:10px;
     margin:10px;
+    box-shadow:  -1px 1px #77aaff,
+         -2px 2px #77aaff,
+         -3px 3px #77aaff,
+         -4px 4px #77aaff,
+         -5px 5px #77aaff;
+
     
 }
 .about{
@@ -98,6 +108,12 @@ margin-right: 150px;
     border-radius: 1%;
     padding:10px;
     margin:10px;
+    box-shadow:  -1px 1px #77aaff,
+         -2px 2px #77aaff,
+         -3px 3px #77aaff,
+         -4px 4px #77aaff,
+         -5px 5px #77aaff;
+
 }
 .tools{
     height: 15em;
@@ -108,36 +124,21 @@ margin-right: 150px;
     border-radius: 1%;
     padding:10px;
     margin:10px;
+    box-shadow:  -1px 1px #77aaff,
+         -2px 2px #77aaff,
+         -3px 3px #77aaff,
+         -4px 4px #77aaff,
+         -5px 5px #77aaff;
+
 }
 @media (max-width:768px) {
-.mainTitles{
-    
-    float: left;
-}
+
+
 #login-buttons{
     clear: both;
 margin-right:100px;
 }
-.description{
-    margin-left:120px;
-    float: left;
 
-}
-.services{
-    margin-left:120px;
-    float: left;
-
-}
-.about{
-    margin-left:120px;
-    float: left;
-
-}
-.tools{
-   margin-left:120px;
-    float: left;
-
-}
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -162,4 +163,18 @@ footer h4{
     background-image: url(images/city.jpg);
    
  }
+
+
+}
+@media (max-width: 640px){
+    .mainImages{
+        margin:1em;
+    }
+    .description{
+        height: 10em;
+     width: 15em;
+
+    }
+
+
 }
