@@ -10,15 +10,25 @@ Template.navigation.helpers({
 });
 
 Template.navigation.events({
-  'click .auth-btn'(e, instance) {
+  'click .auth-btn': function (e, template) {
     e.preventDefault();
     console.log(`from auth: ${e}`);
 
     const emailInput = document.querySelector(".email-input").value,
       passwordInput = document.querySelector(".password-input").value;
+      console.log(emailInput);
+	Meteor.loginWithPassword(emailInput, passwordInput, function(error){
+		if(Meteor.user()) {
+			router.go('/');
+		} else {
+			var message = "There was an error logging in: </strong>" + error.reason + "</strong> Must register first";
 
+			$('#form-messages').html(message);
+		}
+		return;
+	});
 
-      // use to authenticate user Meteor.loginWithPassword(user, password, [callback])
+	return false;
 
-  },
+  	},
 });

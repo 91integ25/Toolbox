@@ -26,3 +26,4 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 twbs:bootstrap
 accounts-password
 accounts-base
+jquery
