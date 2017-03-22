@@ -27,3 +27,4 @@ twbs:bootstrap
 accounts-password
 accounts-base
 jquery
+mdg:geolocation
