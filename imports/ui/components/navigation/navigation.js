@@ -19,7 +19,7 @@ Template.navigation.events({
       console.log(emailInput);
 	Meteor.loginWithPassword(emailInput, passwordInput, function(error){
 		if(Meteor.user()) {
-			FlowRouter.go('/');
+			FlowRouter.go('/tooldata');
 		} else {
 			var message = "There was an error logging in: </strong>" + error.reason + "</strong> Must register first";
 
