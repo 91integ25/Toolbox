@@ -1,7 +1,7 @@
 import './tooldata.html';
 import { Accounts } from 'meteor/accounts-base';
 
-/*userList = new MongoCollection('userList');*/
+
 
 Template.tooldata.events({
 	'submit form': function (e) {
