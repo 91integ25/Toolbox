@@ -9,6 +9,8 @@ import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/tooldata/tooldata.js';
 
 // Set up all routes in the app
+
+
 FlowRouter.route('/', {
   name: 'App.home',
   action() {

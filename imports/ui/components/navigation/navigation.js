@@ -9,7 +9,7 @@ Template.navigation.helpers({
 
 });
 
-Template.navigation.events({
+/*Template.navigation.events({
   'click .auth-btn': function (e, template) {
     e.preventDefault();
     console.log(`from auth: ${e}`);
@@ -17,9 +17,10 @@ Template.navigation.events({
     const emailInput = document.querySelector(".email-input").value,
       passwordInput = document.querySelector(".password-input").value;
       console.log(emailInput);
+      console.log(Meteor.user());
 	Meteor.loginWithPassword(emailInput, passwordInput, function(error){
 		if(Meteor.user()) {
-			FlowRouter.go('/tooldata');
+			FlowRouter.go('/');
 		} else {
 			var message = "There was an error logging in: </strong>" + error.reason + "</strong> Must register first";
 
@@ -32,3 +33,4 @@ Template.navigation.events({
 
   	},
 });
+*/

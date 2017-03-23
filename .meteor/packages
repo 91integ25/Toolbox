@@ -28,3 +28,6 @@ accounts-password
 accounts-base
 jquery
 mdg:geolocation
+accounts-ui
+accounts-facebook
+facebook-config-ui
