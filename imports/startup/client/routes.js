@@ -8,7 +8,7 @@ import '../../ui/pages/register/register.js';
 import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/tooldata/tooldata.js';
 import '../../ui/pages/toolsearch/toolsearch.js';
-import '../../ui/pages/toolsearch/toolrent.js';
+import '../../ui/pages/toolrent/toolrent.js';
 
 // Set up all routes in the app
 

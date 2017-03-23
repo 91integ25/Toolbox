@@ -6,10 +6,11 @@ import { Accounts } from 'meteor/accounts-base';
 Template.tooldata.events({
 	'submit form': function (e) {
 		e.preventDefault();
-		choice = document.querySelector("#choice").value;
+		choice = $(".toolaction").val();
+			
 		console.log(choice);
-		
-		if(choice='search'){
+
+		if(choice==='search'){
 		FlowRouter.go('/toolsearch');
 		} else {
 			FlowRouter.go('/toolrent');

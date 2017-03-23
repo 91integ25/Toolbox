@@ -5,13 +5,16 @@
     <div class="container">
       <h2 class="text-center">Lets connect with your neighbors!</h2>
       <form name="" action="" id="tooldata-form">
-        <input type="radio" name="action" id="choice" value="search">Searching for a tool?<br>
-        <input type="radio" name="action" id="choice" value="rent"> Renting your tool out?<br>
+        <input type="input"
+        class="form-control toolaction"
+        required="required"
+        placeholder="Type rent or search"
+      />
         <button type="submit" class="btn btn-success tooldata-btn">Submit</button>
       </form>
   </div>
   </div>
-  <div class="output"></div>
+  
   
 {{else}}
     <p class="text-center">Please login or create user to continue</p>
