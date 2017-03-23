@@ -9,7 +9,7 @@ Template.navigation.helpers({
 
 });
 
-/*Template.navigation.events({
+Template.navigation.events({
   'click .auth-btn': function (e, template) {
     e.preventDefault();
     console.log(`from auth: ${e}`);
@@ -18,7 +18,7 @@ Template.navigation.helpers({
       passwordInput = document.querySelector(".password-input").value;
       console.log(emailInput);
       console.log(Meteor.user());
-	Meteor.loginWithPassword(emailInput, passwordInput, function(error){
+	/*Meteor.loginWithPassword(emailInput, passwordInput, function(error){
 		if(Meteor.user()) {
 			FlowRouter.go('/');
 		} else {
@@ -27,10 +27,9 @@ Template.navigation.helpers({
 			$('#form-messages').html(message);
 		}
 		return;
-	});
+	});*/
 
 	return false;
 
   	},
 });
-*/
