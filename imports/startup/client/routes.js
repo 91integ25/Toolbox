@@ -7,6 +7,8 @@ import '../../ui/pages/home/home.js';
 import '../../ui/pages/register/register.js';
 import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/tooldata/tooldata.js';
+import '../../ui/pages/toolsearch/toolsearch.js';
+import '../../ui/pages/toolsearch/toolrent.js';
 
 // Set up all routes in the app
 
@@ -29,6 +31,20 @@ FlowRouter.route('/tooldata', {
   name: 'App.tooldata',
   action() {
     BlazeLayout.render('tooldata');
+  }
+})
+
+FlowRouter.route('/toolsearch', {
+  name: 'App.toolsearch',
+  action() {
+    BlazeLayout.render('toolsearch');
+  }
+})
+
+FlowRouter.route('/toolrent', {
+  name: 'App.toolrent',
+  action() {
+    BlazeLayout.render('toolrent');
   }
 })
 

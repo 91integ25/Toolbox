@@ -3,15 +3,23 @@
 {{#if currentUser}}
   <div class="tooldata">
     <div class="container">
-      <h2 class="text-center">What are you looking to do with your neighbor?</h2>
+      <h2 class="text-center">Lets connect with your neighbors!</h2>
       <form name="" action="" id="tooldata-form">
-        <input type="radio" name="rent" value="toolSearch" checked>Searching for a tool?<br>
-        <input type="radio" name="rent" value="toolRent"> Renting your tool out?<br>
+        <input type="radio" name="action" id="choice" value="search">Searching for a tool?<br>
+        <input type="radio" name="action" id="choice" value="rent"> Renting your tool out?<br>
         <button type="submit" class="btn btn-success tooldata-btn">Submit</button>
       </form>
   </div>
   </div>
+  <div class="output"></div>
+  
 {{else}}
     <p class="text-center">Please login or create user to continue</p>
 {{/if}}
 </template>
+
+
+
+  
+
+
