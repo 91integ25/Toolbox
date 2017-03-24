@@ -6,6 +6,8 @@ import { custlist } from '../lib/custlist.js';
 
 import { Accounts } from 'meteor/accounts-base';
 
+import '../toolsearch/toolsearch.html';
+
 test = new Mongo.Collection(null);
 
 /*Template.toolrent.helpers({
@@ -13,6 +15,7 @@ test = new Mongo.Collection(null);
     return custlist.find();
   },
 });*/
+
 
 Template.toolrent.events({
   'click .toolrent-btn': function (e) {
@@ -69,4 +72,13 @@ Template.toolrent.events({
             name: 'Suzy'
       })
   	},
+})
+Template.toolsearch.events({
+  'click .toolsearch-btn': function (e) {
+      e.preventDefault();
+
+      var locate = test.find().fetch();
+      
+      console.log(locate);
+  }
 })
