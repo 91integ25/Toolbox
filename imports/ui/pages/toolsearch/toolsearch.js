@@ -10,7 +10,8 @@ Template.toolsearch.events({
       var locate = test.find().fetch();
       var tool = $(".tool").val().text();
       console.log(locate);
-      /*for(i=0; i<test.[].length; i++)*/
+      
+      for(i=0; i<locate.length; i++)
 
   	},
 })
