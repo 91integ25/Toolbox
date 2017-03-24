@@ -9,11 +9,11 @@ Template.toolrent.events({
     console.log(`from register: ${e}`);
     console.log('toolrent');
     
-      toolrent = $(".tool").val();
-      price = $(".price").val();
-      location = Geolocation.currentLocation();
-      currentUserId = Meteor.userId();
-
+      let toolrent = $("#tool").val();
+      let price = $("#price").val();
+      let location = Geolocation.currentLocation();
+      let currentUserId = Meteor.userId();
+       
       console.log(toolrent);
       console.log(price);
       console.log(location);
