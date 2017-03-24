@@ -18,16 +18,7 @@ Template.navigation.events({
       passwordInput = document.querySelector(".password-input").value;
       console.log(emailInput);
       console.log(Meteor.user());
-	/*Meteor.loginWithPassword(emailInput, passwordInput, function(error){
-		if(Meteor.user()) {
-			FlowRouter.go('/');
-		} else {
-			var message = "There was an error logging in: </strong>" + error.reason + "</strong> Must register first";
-
-			$('#form-messages').html(message);
-		}
-		return;
-	});*/
+	
 
 	return false;
 
