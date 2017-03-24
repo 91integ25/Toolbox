@@ -15,6 +15,7 @@ Template.toolrent.events({
       currentUserId = Meteor.userId();
 
       console.log(toolrent);
+      console.log(price);
       console.log(location);
       console.log(currentUserId);
       
