@@ -10,10 +10,12 @@ Template.toolrent.events({
     console.log('toolrent');
     
       toolrent = $(".tool").val();
+      price = $(".price").val();
       location = Geolocation.currentLocation();
       currentUserId = Meteor.userId();
 
       console.log(toolrent);
+      console.log(price);
       console.log(location);
       console.log(currentUserId);
       
