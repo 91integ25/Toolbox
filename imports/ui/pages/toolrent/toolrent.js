@@ -17,9 +17,7 @@ test = new Mongo.Collection(null);
 Template.toolrent.events({
   'click .toolrent-btn': function (e) {
     e.preventDefault();
-    console.log(`from toolrent: ${e}`);
-    
-    
+
       let toolrent = $("#tool").val();
       let price = $("#price").val();
       let location = Geolocation.currentLocation();
