@@ -1,24 +1,17 @@
 import './toolsearch.html';
 import { Accounts } from 'meteor/accounts-base';
+import { toolrent } from '../toolrent/toolrent.js';
 
-/*userList = new MongoCollection('userList');
-
-Template.register.events({
+Template.toolsearch.events({
   'click .toolsearch-btn': function (e) {
     e.preventDefault();
     console.log(`from register: ${e}`);
 
-    
+      var locate = test.find().fetch();
       var tool = $(".tool").val().text();
-      var location = Geolocation.currentLocation();
-      var currentUserId = Meteor.userId();
+      console.log(locate);
       
-      userList.insert({
-            tool: tool,
-            location: location,
-            createdBy: currentUserId
-        });
-        
+      for(i=0; i<locate.length; i++)
+
   	},
 })
-*/
