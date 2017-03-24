@@ -1,29 +1,74 @@
 import './toolrent.html';
+import { Meteor } from 'meteor/meteor';
+import { Template } from 'meteor/templating';
+ 
+import { custlist } from '../lib/custlist.js';
+
 import { Accounts } from 'meteor/accounts-base';
 
-custlist = new Mongo.Collection('custlist');
+test = new Mongo.Collection(null);
+
+/*Template.toolrent.helpers({
+  custlist: function() {
+    return custlist.find();
+  },
+});*/
 
 Template.toolrent.events({
   'click .toolrent-btn': function (e) {
     e.preventDefault();
-    console.log(`from register: ${e}`);
-    console.log('toolrent');
+    console.log(`from toolrent: ${e}`);
     
-      toolrent = $(".tool").val();
-      price = $(".price").val();
-      location = Geolocation.currentLocation();
-      currentUserId = Meteor.userId();
+    
+      let toolrent = $("#tool").val();
+      let price = $("#price").val();
+      let location = Geolocation.currentLocation();
+      let currentUserId = Meteor.userId();
 
       console.log(toolrent);
       console.log(price);
       console.log(location);
       console.log(currentUserId);
       
-      custlist.insert({
+      test.insert({
             toolrent: toolrent,
-            location: location,
-            createdBy: currentUserId
+            price: price,
+            /*location: location,*/
+            name: 'Joe'
         });
-        
+      test.insert({
+            toolrent: "lawnmower",
+            price: 10,
+            /*location: location,*/
+            name: 'Billy'
+      })
+
+      test.insert({
+            toolrent: "chainsaw",
+            price: 8,
+            /*location: location,*/
+            name: 'Bob'
+      })
+
+      test.insert({
+            toolrent: "lawnmower",
+            price: 20,
+            /*location: location,*/
+            name: 'Lane'
+      })
+
+      test.insert({
+            toolrent: "chainsaw",
+            price: 15,
+            /*location: location,*/
+            name: 'Suzy'
+      })
+
+      test.insert({
+            toolrent: "chainsaw",
+            price: 25,
+            /*location: location,*/
+            name: 'Suzy'
+      })
   	},
 })
