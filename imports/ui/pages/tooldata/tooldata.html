@@ -7,14 +7,15 @@
             <h1>Let's Connect With Your Neighbors!</h1>
           </header>
 
-        <a class="btn btn-success btn-lg" href="/toolrent">Add a Tool to the Neighborhood Toolbox</a>
-        <a class="btn btn-success btn-lg" href="/toolsearch">Search Your Neighborhood Toolbox</a>
+        <a class="btn btn-info btn-lg" href="/toolrent">Add a Tool to the Neighborhood Toolbox</a>
+        <a class="btn btn-info btn-lg" href="/toolsearch">Search Your Neighborhood Toolbox</a>
         </center>
   </div>
 
 
 
 {{else}}
-    <p class="text-center">Please login or create user to continue</p>
+  {{> redirect}}
 {{/if}}
+
 </template>

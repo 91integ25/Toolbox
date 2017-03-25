@@ -9,6 +9,7 @@ import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/tooldata/tooldata.js';
 import '../../ui/pages/toolsearch/toolsearch.js';
 import '../../ui/pages/toolrent/toolrent.js';
+import '../../ui/pages/redirect/redirect.js';
 
 // Set up all routes in the app
 
@@ -45,6 +46,13 @@ FlowRouter.route('/toolrent', {
   name: 'App.toolrent',
   action() {
     BlazeLayout.render('toolrent');
+  }
+})
+
+FlowRouter.route('/redirect', {
+  name: 'App.redirect',
+  action() {
+    BlazeLayout.render('redirect');
   }
 })
 

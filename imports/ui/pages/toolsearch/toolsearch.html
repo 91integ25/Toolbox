@@ -2,23 +2,45 @@
 {{> navigation}}
 {{#if currentUser}}
 {{> tooldata}}
-<br>
+
   <div class="toolsearch">
     <div class="container">
       <h2 class="text-center">Search For Your Tool</h2>
       <center>
-      <form name="" action="" id="tool-form">
-        <input type="text" id="tool" value=""><br><br>
-        <button type="submit" class="btn btn-success toolsearch-btn">Submit</button>
-      </form>
 
+      <div class="row main">
+        <div class="main-login">
+        <h5>Type the name of the tool you are looking to rent from a neighbor:</h5>
+        <form name="" action="" id="tool-form">
 
-      </center>
+            <div class="form-group">
+              <label for="tool" class="cols-sm-2 control-label">Tool:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="tool" id="tool"  placeholder="Tool Name"/>
+                </div>
+              </div>
+            </div>
 
-  </div>
+            <div class="form-group ">
+              <button type="submit" class="btn btn-primary toolsearch-btn">Submit</button>
+            </div>
 
-  </div>
+          </form>
+        </div>
+      </div>
+    </center>
+    </div>
+    </div>
+    <br>
+    <footer>
+        <div class="container">
+            Copyright &copy; 2017 Toolbox
+        </div>
+    </footer>
+
   {{else}}
-    <p class="text-center">Please login or create user to continue</p>
-{{/if}}
+  {{> redirect}}
+  {{/if}}
+
   </template>
