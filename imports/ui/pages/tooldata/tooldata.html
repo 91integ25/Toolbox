@@ -2,23 +2,19 @@
   {{> navigation}}
 {{#if currentUser}}
   <div class="tooldata">
-    <div class="container">
-      <h2 class="text-center">Lets connect with your neighbors!</h2>
         <center>
-        <a class="btn btn-success" href="/toolrent">Post Your Tool</a>
-        <a class="btn btn-success" href="/toolsearch">Search Your Tool</a>
+          <header class="image-bg-fluid-height">
+            <h1>Let's Connect With Your Neighbors!</h1>
+          </header>
+
+        <a class="btn btn-success btn-lg" href="/toolrent">Add a Tool to the Neighborhood Toolbox</a>
+        <a class="btn btn-success btn-lg" href="/toolsearch">Search Your Neighborhood Toolbox</a>
         </center>
   </div>
-  </div>
-  
-  
+
+
+
 {{else}}
     <p class="text-center">Please login or create user to continue</p>
 {{/if}}
 </template>
-
-
-
-  
-
-
