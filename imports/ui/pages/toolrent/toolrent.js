@@ -36,43 +36,39 @@ Template.toolrent.events({
             price: price,
             /*location: location,*/
             name: 'Joe'
-        });
-      test.insert({
+        },
+        {
             toolrent: "lawnmower",
             price: 10,
             /*location: location,*/
             name: 'Billy'
-      })
-
-      test.insert({
+      },
+      {
             toolrent: "chainsaw",
             price: 8,
             /*location: location,*/
             name: 'Bob'
-      })
-
-      test.insert({
+      },
+      {
             toolrent: "lawnmower",
             price: 20,
             /*location: location,*/
             name: 'Lane'
-      })
-
-      test.insert({
+      },
+      {
             toolrent: "chainsaw",
             price: 15,
             /*location: location,*/
             name: 'Suzy'
-      })
-
-      test.insert({
+      },
+      {
             toolrent: "chainsaw",
             price: 25,
             /*location: location,*/
             name: 'Suzy'
-      })
-         $('#tool').empty();
-        $('#price').empty();
+      });
+         $('#tool').val('');
+        $('#price').val('');
   	},
 })
 
@@ -88,18 +84,18 @@ Template.toolsearch.events({
        
 
         if(searchedTool === locate[i].toolrent){
-         var toolrent = $('<p>').html(locate[i].toolrent);
-         var name = $('<p>').html(locate[i].name);
-         var price = $('<p>').html(locate[i].price);
+         var toolrent = $('<p>').html("Name: " + locate[i].toolrent + " <button type='submit'>email</button");
+         var name = $('<p>').html("Tool: " + locate[i].name);
+         var price = $('<p>').html("$ per hour: " +locate[i].price);
 
          $('#userpost')
-         .append("Name: " + name + "<button> type='submit'>email</button")
-         .append("Tool: " + toolrent)
-         .append("$ per hour: " + price);
-
+         .append(name)
+         .append(toolrent)
+         .append( price);
+          console.log( price);
         }
       }
-        $('#tool').empty();
+        $('#tool').val('');
 
   }
 })
