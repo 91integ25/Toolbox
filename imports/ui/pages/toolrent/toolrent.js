@@ -71,14 +71,35 @@ Template.toolrent.events({
             /*location: location,*/
             name: 'Suzy'
       })
+         $('#tool').empty();
+        $('#price').empty();
   	},
 })
+
 Template.toolsearch.events({
   'click .toolsearch-btn': function (e) {
       e.preventDefault();
 
       var locate = test.find().fetch();
-      
-      console.log(locate);
+      var searchedTool = $('#tool').val();
+  
+     
+      for(var i = 0; i < locate.length; i++){
+       
+
+        if(searchedTool === locate[i].toolrent){
+         var toolrent = $('<p>').html(locate[i].toolrent);
+         var name = $('<p>').html(locate[i].name);
+         var price = $('<p>').html(locate[i].price);
+
+         $('#userpost')
+         .append(toolrent)
+         .append(name)
+         .append(price);
+
+        }
+      }
+        $('#tool').empty();
+
   }
 })
