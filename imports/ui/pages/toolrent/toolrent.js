@@ -36,32 +36,32 @@ Template.toolrent.events({
             price: price,
             /*location: location,*/
             name: 'Joe'
-        },
-        {
+        });
+      test.insert({
             toolrent: "lawnmower",
             price: 10,
             /*location: location,*/
             name: 'Billy'
-      },
-      {
+      });
+      test.insert({
             toolrent: "chainsaw",
             price: 8,
             /*location: location,*/
             name: 'Bob'
-      },
-      {
+      });
+      test.insert({
             toolrent: "lawnmower",
             price: 20,
             /*location: location,*/
             name: 'Lane'
-      },
-      {
+      });
+      test.insert({
             toolrent: "chainsaw",
             price: 15,
             /*location: location,*/
             name: 'Suzy'
-      },
-      {
+      });
+      test.insert({
             toolrent: "chainsaw",
             price: 25,
             /*location: location,*/
@@ -84,14 +84,14 @@ Template.toolsearch.events({
        
 
         if(searchedTool === locate[i].toolrent){
-         var toolrent = $('<p>').html("Name: " + locate[i].toolrent + " <button type='submit'>email</button");
-         var name = $('<p>').html("Tool: " + locate[i].name);
+         var name = $('<p>').html("Name: " + locate[i].name + " <button type='submit'>email</button>");
+         var toolrent = $('<p>').html("Tool: " + locate[i].toolrent);
          var price = $('<p>').html("$ per hour: " +locate[i].price);
 
          $('#userpost')
          .append(name)
          .append(toolrent)
-         .append( price);
+         .append(price);
           console.log( price);
         }
       }
