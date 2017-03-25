@@ -1,7 +1,7 @@
 import './toolrent.html';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
- 
+
 import { custlist } from '../lib/custlist.js';
 
 import { Accounts } from 'meteor/accounts-base';
@@ -30,7 +30,7 @@ Template.toolrent.events({
       console.log(price);
       console.log(location);
       console.log(currentUserId);
-      
+
       test.insert({
             toolrent: toolrent,
             price: price,
@@ -76,23 +76,23 @@ Template.toolsearch.events({
   'click .toolsearch-btn': function (e) {
       e.preventDefault();
 
-      var locate = test.find().fetch();
-      var searchedTool = $('#tool').val();
-  
-     
-      for(var i = 0; i < locate.length; i++){
-       
+      const locate = test.find().fetch();
+      const searchedTool = $('#tool').val();
 
-        if(searchedTool === locate[i].toolrent){
-         var name = $('<p>').html("Name: " + locate[i].name + " <button type='submit'>email</button>");
-         var toolrent = $('<p>').html("Tool: " + locate[i].toolrent);
-         var price = $('<p>').html("$ per hour: " +locate[i].price);
+      const locateLen = locate.length;
+      for (let i = 0; i < locateLen; i++) {
 
-         $('#userpost')
-         .append(name)
-         .append(toolrent)
-         .append(price);
-          console.log( price);
+
+        if (searchedTool === locate[i].toolrent) {
+          const tName = locate[i].name;
+          const tRent = locate[i].toolrent;
+          const tPrice = locate[i].price;
+
+         $('#userpost').append('<div class="row"><div class="col-md-12">' +
+         '<p class="text-left"> <strong>Name:</strong> ' + tName +
+         '</p><p class="text-left"><strong>Tool:</strong> ' + tRent +
+         '</p><p class="text-left"><strong>$ per hour:</strong> ' + tPrice +
+         '<br><button type="submit" class="btn btn-primary pull-left">email</button></p></div></div>');
         }
       }
         $('#tool').val('');
