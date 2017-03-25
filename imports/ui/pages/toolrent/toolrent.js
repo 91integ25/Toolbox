@@ -93,9 +93,9 @@ Template.toolsearch.events({
          var price = $('<p>').html(locate[i].price);
 
          $('#userpost')
-         .append(toolrent)
-         .append(name)
-         .append(price);
+         .append("Name: " + name + "<button> type='submit'>email</button")
+         .append("Tool: " + toolrent)
+         .append("$ per hour: " + price);
 
         }
       }
